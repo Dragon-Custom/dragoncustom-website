@@ -1,9 +1,12 @@
 import { FC } from "react";
+import { Page } from "../../components/Page";
 
 export const HomePage: FC = () => {
 	return (
-		<>
-			Home Page
-		</>
-	)
+		<Page>
+			<>
+				HomePage
+			</>
+		</Page>
+	);
 };

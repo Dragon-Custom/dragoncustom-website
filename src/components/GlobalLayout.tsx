@@ -24,6 +24,9 @@ export default function GlobalLayout() {
 				onMenuOpenChange={setIsMenuOpen}
 				maxWidth="full"
 				isBordered
+				style={{
+					overflow: "hidden"
+				}}
 			>
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -57,7 +60,6 @@ export default function GlobalLayout() {
 				<NavbarContent className="hidden sm:flex gap-4" justify="end">
 					<ButtonGroup
 						variant="ghost"
-						size="lg"
 						radius="full"
 						fullWidth
 					>
