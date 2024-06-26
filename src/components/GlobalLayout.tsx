@@ -78,15 +78,17 @@ export default function GlobalLayout() {
 						})}
 					</ButtonGroup>
 				</NavbarContent>
-				<NavbarMenu>
+
+				<NavbarMenu portalContainer={document.body.firstElementChild?.firstElementChild?.firstElementChild}>
 					{RouteList.map((item, index) => (
 						<NavbarMenuItem key={`${item.title}-${index}`}>
 							<Button
-								color={"primary"}
 								fullWidth
 								as={Link}
+								variant="ghost"
 								to={item.url}
 								size="lg"
+								radius="none"
 							>
 								{item.title}
 							</Button>
