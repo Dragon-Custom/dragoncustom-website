@@ -3,7 +3,6 @@ import { ReactElement } from "react"
 export const Page = ({ children }: { children: ReactElement }) => {
 	return (
 		<div
-			className="page"
 			style={{
 				position: "absolute",
 				display: "inline",

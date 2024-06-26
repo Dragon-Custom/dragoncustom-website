@@ -1,6 +1,7 @@
 import {
 	Button,
 	ButtonGroup,
+	Image,
 	Navbar,
 	NavbarBrand,
 	NavbarContent,
@@ -25,7 +26,7 @@ export default function GlobalLayout() {
 				maxWidth="full"
 				isBordered
 				style={{
-					overflow: "hidden"
+					overflow: "hidden",
 				}}
 			>
 				<NavbarMenuToggle
@@ -41,28 +42,26 @@ export default function GlobalLayout() {
 							height: "3.5rem",
 						}}
 					>
-						<img
+						<Image
 							className="dark:hidden"
 							src={svgLogo}
 							style={{
 								height: "4rem",
 							}}
+							isBlurred
 						/>
-						<img
+						<Image
 							className="hidden dark:inline"
 							src={darkModeLogo}
 							style={{
 								height: "4rem",
 							}}
+							isBlurred
 						/>
 					</Button>
 				</NavbarBrand>
 				<NavbarContent className="hidden sm:flex gap-4" justify="end">
-					<ButtonGroup
-						variant="ghost"
-						radius="full"
-						fullWidth
-					>
+					<ButtonGroup variant="ghost" radius="full" fullWidth>
 						{RouteList.map((item, index) => {
 							if (item.hidden) return;
 							return (
